@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/splash_screens/screen2.dart';
-import 'package:my_property/splash_screens/screen_4.dart';
+import 'package:my_property/splash_screens/onboarding1.dart';
+import 'package:my_property/splash_screens/onboarding3.dart';
 import 'package:my_property/widget_constants/back_button.dart';
 
 import '../constants/color_constants.dart';

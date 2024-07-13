@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/splash_screens/screen2.dart';
+import 'package:my_property/splash_screens/onboarding1.dart';
 
 import '../constants/color_constants.dart';
 import '../widget_constants/custom_button.dart';

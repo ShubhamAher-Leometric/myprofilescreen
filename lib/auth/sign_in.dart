@@ -3,6 +3,7 @@ import 'package:my_property/auth/forgot_password.dart';
 import 'package:my_property/auth/otp_screen.dart';
 import 'package:my_property/auth/register_screen.dart';
 import 'package:my_property/home_screens/homescreen.dart';
+import 'package:my_property/menu.dart';
 
 import '../constants/color_constants.dart';
 import '../widget_constants/custom_button.dart';
@@ -142,7 +143,7 @@ class _SignInState extends State<Sign_in> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Homescreen()),
+                        builder: (context) => MenuPage()),
                   );
                 },
               ),
