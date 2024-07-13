@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_property/auth/set_new_password.dart';
 import 'package:pinput/pinput.dart';
+
+import '../constants/color_constants.dart';
+import '../widget_constants/custom_button.dart';
 
 class Otp_screen extends StatefulWidget {
   const Otp_screen({super.key});
@@ -41,53 +45,103 @@ class _Otp_screenState extends State<Otp_screen> {
             ),
             child: Icon(Icons.arrow_back_ios,size:15,)),
       ),
-      body: Column(
-        children: [
-          RichText(
-            text: TextSpan(
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
-                color: Colors.black,
-              ),
-              children: [
-                TextSpan(text: 'Enter the '),
-                TextSpan(
-                  text: 'code',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Enter the code', style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),),
+            Text('Enter the 4 digit code that we just sent to jonathan@email.com'),
+            SizedBox(height: 50,),
+            Expanded(
+              child: Column(
+                children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Pinput(
+                        length: 4,
+                        defaultPinTheme: defaultPinTheme.copyWith(
+                          width: screenWidth * 0.16,
+                          height: screenWidth * 0.16,
+                          decoration: defaultPinTheme.decoration!.copyWith(
+                            border: Border.all(color: Colors.grey),
+                          ),
+                          textStyle: TextStyle(
+                            color: Color(0xFF3629B7),
+                            fontSize: 22,
+                          ),
+                        ),
+                        focusedPinTheme: defaultPinTheme.copyWith(
+                          width: screenWidth * 0.12,
+                          height: screenWidth * 0.13,
+                          decoration: defaultPinTheme.decoration!.copyWith(
+                            border: Border.all(color: Color(0xFF3629B7)),
+                          ),
+                          textStyle: TextStyle(
+                            color: Color(0xFF3629B7),
+                            fontSize: 22,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
+                  SizedBox(height: 50,),
+                  Center(
+                    child: CustomElevatedButton(
+                      title: 'Verify Otp',
+                      color: primary,
+                      textColor: textcolor,
+                      size: MediaQuery.of(context).size.width / 2,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SetNewPassword()),
+                        );
+                      },
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                              height: 30,
+                              width: 80,
+                              decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
+                              ),
+                              child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.punch_clock,
+                        size: 20, // Adjust size as needed
+                      ),
+                      Text('00:20'),
+                    ],
+                              ),
+                              ),
+                    SizedBox(height: 10,),
+                    Text('Didn’t receive the OTP? Resend OTP'),
+                  ],
                 ),
               ],
             ),
-          ),
-          Pinput(
-            length: 4,
-            defaultPinTheme: defaultPinTheme.copyWith(
-              width: screenWidth * 0.13,
-              height: screenWidth * 0.14,
-              decoration: defaultPinTheme.decoration!.copyWith(
-                border: Border.all(color: Colors.grey),
-              ),
-              textStyle: TextStyle(
-                color: Color(0xFF3629B7),
-                fontSize: 22,
-              ),
-            ),
-            focusedPinTheme: defaultPinTheme.copyWith(
-              width: screenWidth * 0.12,
-              height: screenWidth * 0.13,
-              decoration: defaultPinTheme.decoration!.copyWith(
-                border: Border.all(color: Color(0xFF3629B7)),
-              ),
-              textStyle: TextStyle(
-                color: Color(0xFF3629B7),
-                fontSize: 22,
-              ),
-            ),
-          ),
-        ],
+            SizedBox(height: 30,),
+          ],
+        ),
       ),
     );
   }

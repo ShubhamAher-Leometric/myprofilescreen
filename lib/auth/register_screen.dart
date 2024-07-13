@@ -1,17 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/auth/otp_screen.dart';
 
 import '../constants/color_constants.dart';
+import '../home_screens/homescreen.dart';
 import '../widget_constants/custom_button.dart';
+import 'forgot_password.dart';
 
-class Sign_in extends StatefulWidget {
-  const Sign_in({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<Sign_in> createState() => _SignInState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _SignInState extends State<Sign_in> {
+class _RegisterScreenState extends State<RegisterScreen> {
   bool _isObscured = true;
 
   @override
@@ -33,9 +35,9 @@ class _SignInState extends State<Sign_in> {
                   color: Colors.black,
                 ),
                 children: [
-                  TextSpan(text: 'Let\'s '),
+                  TextSpan(text: 'Create your '),
                   TextSpan(
-                    text: 'Sign In?',
+                    text: 'account',
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
@@ -48,9 +50,29 @@ class _SignInState extends State<Sign_in> {
               height: 40,
             ),
             Text(
-              "Welcome back",
+              "quis nostrud exercitation ullamco laboris nisi ut",
               style: TextStyle(
-                fontSize: 18, // Adjust font size as needed
+                fontSize: 16, // Adjust font size as needed
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 70, // Increase height as needed
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              child: Center(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Name",
+                    border: InputBorder.none,
+                    prefixIcon: Icon(Icons.email),
+                    contentPadding: EdgeInsets.symmetric(vertical: 17.0, horizontal: 0.0), // Adjusted horizontal padding
+                  ),
+                ),
               ),
             ),
             SizedBox(
@@ -110,10 +132,8 @@ class _SignInState extends State<Sign_in> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(child: Text("Forgot password?"),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Otp_screen()));
-                },),
+                GestureDetector(child: Text("Terms and conditions"),
+                  onTap: (){},),
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -131,15 +151,15 @@ class _SignInState extends State<Sign_in> {
             ),
             Center(
               child: CustomElevatedButton(
-                title: 'Login',
+                title: 'Register',
                 color: primary,
                 textColor: textcolor,
                 size: MediaQuery.of(context).size.width / 2,
-                onPressed: () {
+                onPressed: (){
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Sign_in()),
+                        builder: (context) => Homescreen()),
                   );
                 },
               ),

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/splash_screens/screen3.dart';
-import 'package:my_property/splash_screens/screen_5.dart';
+import 'package:my_property/auth/login_splash.dart';
 
 import '../constants/color_constants.dart';
+import '../widget_constants/back_button.dart';
 import '../widget_constants/custom_button.dart';
 
 class Screen4 extends StatefulWidget {
@@ -36,7 +36,7 @@ class _Screen4State extends State<Screen4> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Screen5()),
+                        MaterialPageRoute(builder: (context) => Login_splash()),
                       );
                     },
                     style: TextButton.styleFrom(
@@ -114,27 +114,7 @@ class _Screen4State extends State<Screen4> {
                               SizedBox(
                                 width: 40,
                               ),
-                              Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(
-                                      50), // Adjust the radius as needed
-                                ),
-                                child:IconButton(
-                                  icon: Icon(
-                                    Icons.arrow_back,
-                                    size: 30, // Adjust size as needed
-                                  ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => Screen3()),
-                                    );
-                                  },
-                                )
-                              ),
+                              const CustomBackButton(),
                               SizedBox(
                                 width: 15,
                               ),
@@ -147,7 +127,7 @@ class _Screen4State extends State<Screen4> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Screen5()),
+                                        builder: (context) => Login_splash()),
                                   );
                                 },
                               ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_property/splash_screens/screen2.dart';
 import 'package:my_property/splash_screens/screen_4.dart';
+import 'package:my_property/widget_constants/back_button.dart';
 
 import '../constants/color_constants.dart';
 import '../widget_constants/custom_button.dart';
@@ -113,27 +114,7 @@ class _Screen3State extends State<Screen3> {
                               SizedBox(
                                 width: 40,
                               ),
-                              Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(
-                                      50), // Adjust the radius as needed
-                                ),
-                                child: IconButton(
-                                  icon: Icon(
-                                    Icons.arrow_back,
-                                    size: 20, // Adjust size as needed
-                                  ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => Screen2()),
-                                    );
-                                  },
-                                )
-                              ),
+                              const CustomBackButton(),
                               SizedBox(
                                 width: 15,
                               ),
