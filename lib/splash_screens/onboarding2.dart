@@ -41,7 +41,7 @@ class _Screen3State extends State<Screen3> {
                       );
                     },
                     style: TextButton.styleFrom(
-                      backgroundColor: skip_btn, // Set the background color
+                      backgroundColor: appskip_btn, // Set the background color
                       foregroundColor: Colors.black, // Set the text color
                     ),
                     child: Padding(
@@ -120,8 +120,8 @@ class _Screen3State extends State<Screen3> {
                               ),
                               CustomElevatedButton(
                                 title: 'Next',
-                                color: primary,
-                                textColor: textcolor,
+                                color: appprimary,
+                                textColor: apptextcolor,
                                 size: MediaQuery.of(context).size.width / 2,
                                 onPressed: () {
                                   Navigator.push(

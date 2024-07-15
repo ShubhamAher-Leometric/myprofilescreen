@@ -89,8 +89,8 @@ class _Login_splashState extends State<Login_splash> {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: CustomElevatedButton(
                   title: 'Continue with Email',
-                  color: primary,
-                  textColor: textcolor,
+                  color: appprimary,
+                  textColor: apptextcolor,
                   size: MediaQuery.of(context).size.width / 1,
                   onPressed: () {
                     Navigator.push(

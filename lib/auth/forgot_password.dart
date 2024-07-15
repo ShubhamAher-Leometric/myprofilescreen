@@ -48,8 +48,8 @@ class _ResetPasswordState extends State<ResetPassword> {
               Center(
                 child: CustomElevatedButton(
                   title: 'Get otp',
-                  color: primary,
-                  textColor: textcolor,
+                  color: appprimary,
+                  textColor: apptextcolor,
                   size: MediaQuery.of(context).size.width / 2,
                   onPressed: () {
                     Navigator.push(

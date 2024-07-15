@@ -59,8 +59,8 @@ class _Screen1State extends State<Screen1> {
             child: Center(
               child: CustomElevatedButton(
                 title: 'Let\'s Start',
-                color: primary,
-                textColor: textcolor,
+                color: appprimary,
+                textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Screen2()));

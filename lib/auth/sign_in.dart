@@ -136,8 +136,8 @@ class _SignInState extends State<Sign_in> {
             Center(
               child: CustomElevatedButton(
                 title: 'Login',
-                color: primary,
-                textColor: textcolor,
+                color: appprimary,
+                textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
                 onPressed: (){
                   Navigator.push(

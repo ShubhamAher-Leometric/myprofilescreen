@@ -152,8 +152,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Center(
               child: CustomElevatedButton(
                 title: 'Register',
-                color: primary,
-                textColor: textcolor,
+                color: appprimary,
+                textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
                 onPressed: (){
                   Navigator.push(

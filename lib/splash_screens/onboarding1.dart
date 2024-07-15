@@ -39,7 +39,7 @@ class _Screen2State extends State<Screen2> {
                       );
                     },
                     style: TextButton.styleFrom(
-                      backgroundColor: skip_btn, // Set the background color
+                      backgroundColor: appskip_btn, // Set the background color
                       foregroundColor: Colors.black, // Set the text color
                     ),
                     child: Padding(
@@ -109,8 +109,8 @@ class _Screen2State extends State<Screen2> {
                         child: Center(
                           child: CustomElevatedButton(
                             title: 'Next',
-                            color: primary,
-                            textColor: textcolor,
+                            color: appprimary,
+                            textColor: apptextcolor,
                             size: MediaQuery.of(context).size.width / 2,
                             onPressed: () {
                               Navigator.push(

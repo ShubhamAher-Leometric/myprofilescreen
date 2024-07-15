@@ -93,8 +93,8 @@ class _Otp_screenState extends State<Otp_screen> {
                   Center(
                     child: CustomElevatedButton(
                       title: 'Verify Otp',
-                      color: primary,
-                      textColor: textcolor,
+                      color: appprimary,
+                      textColor: apptextcolor,
                       size: MediaQuery.of(context).size.width / 2,
                       onPressed: () {
                         Navigator.push(

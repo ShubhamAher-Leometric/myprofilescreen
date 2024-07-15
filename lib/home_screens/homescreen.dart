@@ -50,7 +50,7 @@ class _HomescreenState extends State<Homescreen> {
                             children: [
                               Icon(
                                 Icons.location_on,
-                                color: primary,
+                                color: appprimary,
                                 size: 20, // Adjust size as needed
                               ),
                               Text('Pune'),
@@ -69,7 +69,7 @@ class _HomescreenState extends State<Homescreen> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                             border: Border.all(
-                              color: primary,
+                              color: appprimary,
                               width: 1.0,
                             ),
                           ),
@@ -97,7 +97,7 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                 ),
                 Positioned(
-                  top: 100,
+                  top: 110,
                   left: 0,
                   right: 0,
                   child: Padding(
@@ -174,6 +174,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ],
             ),
+            SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0,right: 20),
               child: Align(
@@ -340,6 +341,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
+            SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0,right: 20),
               child: Container(
@@ -372,7 +374,7 @@ class _HomescreenState extends State<Homescreen> {
                                   topRight: Radius.circular(25),
                                 ),
                               ),
-                              child: Icon(Icons.arrow_forward,color: textcolor,),
+                              child: Icon(Icons.arrow_forward,color: apptextcolor,),
                             ),
                             ),
                             ]
@@ -389,9 +391,9 @@ class _HomescreenState extends State<Homescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Top Locations',style: TextStyle(fontSize: 22,color: textcolor2,fontWeight: FontWeight.w700),),
+                  Text('Top Locations',style: TextStyle(fontSize: 22,color: apptextcolor2,fontWeight: FontWeight.w700),),
                   Spacer(),
-                  Text('explore',style: TextStyle(fontSize: 16,color: textcolor2),
+                  Text('explore',style: TextStyle(fontSize: 16,color: apptextcolor2),
                   ),
                 ],
               ),
@@ -403,7 +405,7 @@ class _HomescreenState extends State<Homescreen> {
     );
   }
   Widget itemGrid(double width) {
-    const int count = 5;
+    const int count = 6;
     const int itemsPerRow = 2;
     const double ratio = 1 / 1.7;
     const double horizontalPadding = 0;
@@ -433,15 +435,76 @@ class _HomescreenState extends State<Homescreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
-                      child: AspectRatio(
-                        aspectRatio: 0.8,
-                        child: Image.asset(
-                          'assets/splash_1.png',
-                          fit: BoxFit.cover,
+                    child: Stack(
+                      children: [
+                        Container(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(25),
+                            child: AspectRatio(
+                              aspectRatio: 0.8,
+                              child: Image.asset(
+                                'assets/splash_1.png',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
+                        Positioned(
+                            top: 5,
+                            right: 5,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: appprimary,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(Icons.favorite_rounded,size:16,color: apptextcolor,),
+                              ),
+                            ),
+                        ),
+                        Positioned(
+                          bottom: 5,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10.0,right: 10.0),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width/2.8,
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 25,
+                                    decoration: BoxDecoration(
+                                      color: appbgSecondary,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 7.0,right: 7.0),
+                                        child: Text('House',style: TextStyle(color: apptextcolor,fontSize: 10),),
+                                      ),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Container(
+                                    height: 25,
+                                    decoration: BoxDecoration(
+                                      color: appbgSecondary,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 7.0,right: 7.0),
+                                        child: Text('\$ 220',style: TextStyle(color: apptextcolor,fontSize: 12),),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+
+                      ],
                     ),
                   ),
                   Spacer(),
@@ -450,7 +513,7 @@ class _HomescreenState extends State<Homescreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(width: 10,),
-                      Text('Wings Tower',style: TextStyle(fontSize: 18,color: textcolor2,fontWeight: FontWeight.w700),),
+                      Text('Wings Tower',style: TextStyle(fontSize: 18,color: apptextcolor2,fontWeight: FontWeight.w700),),
                     ],
                   ),
                   Spacer(),
@@ -461,8 +524,8 @@ class _HomescreenState extends State<Homescreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(width: 10,),
-                        Icon(Icons.location_on,color: textcolor2,size: 14,),
-                        Text('Jakarta, Indonesia',style: TextStyle(fontSize: 14,color: textcolor2,fontWeight: FontWeight.w400),),
+                        Icon(Icons.location_on,color: apptextcolor2,size: 14,),
+                        Text('Jakarta, Indonesia',style: TextStyle(fontSize: 14,color: apptextcolor2,fontWeight: FontWeight.w400),),
                       ],
                     ),
                   ),

@@ -97,8 +97,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
               Center(
                 child: CustomElevatedButton(
                   title: 'Change Password',
-                  color: primary,
-                  textColor: textcolor,
+                  color: appprimary,
+                  textColor: apptextcolor,
                   size: MediaQuery.of(context).size.width / 1.8,
                   onPressed: () {
                     Navigator.push(

@@ -47,8 +47,8 @@ class _SucessScreenState extends State<SucessScreen> {
               Center(
                 child: CustomElevatedButton(
                   title: 'Ok',
-                  color: primary,
-                  textColor: textcolor,
+                  color: appprimary,
+                  textColor: apptextcolor,
                   size: MediaQuery.of(context).size.width / 2,
                   onPressed: () {},
                 ),
