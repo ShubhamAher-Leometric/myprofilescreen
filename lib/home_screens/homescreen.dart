@@ -398,6 +398,114 @@ class _HomescreenState extends State<Homescreen> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              child: Align(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 47,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        child:Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                              child: CircleAvatar(
+                                radius: 20,
+                                backgroundColor: Colors.red,
+                                backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
+                            ),
+                          SizedBox(width: 8,),
+                          Text('Bali',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
+                          SizedBox(width: 5,)
+                        ],)
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                          height: 47,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child:Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                                child: CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: Colors.red,
+                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
+                              ),
+                              SizedBox(width: 8,),
+                              Text('Jakarta',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
+                              SizedBox(width: 5,)
+                            ],)
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                          height: 47,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child:Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                                child: CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: Colors.red,
+                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
+                              ),
+                              SizedBox(width: 8,),
+                              Text('Indonesia',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
+                              SizedBox(width: 5,)
+                            ],)
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                          height: 47,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child:Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                                child: CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: Colors.red,
+                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
+                              ),
+                              SizedBox(width: 8,),
+                              Text('Maldives',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
+                              SizedBox(width: 5,)
+                            ],)
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Featured Properties',style: TextStyle(fontSize: 22,color: apptextcolor2,fontWeight: FontWeight.w700),),
+                  Spacer(),
+                  Text('explore',style: TextStyle(fontSize: 16,color: apptextcolor2),
+                  ),
+                ],
+              ),
+            ),
             itemGrid(width),
           ],
         ),

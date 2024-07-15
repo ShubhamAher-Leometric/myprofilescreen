@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/color_constants.dart';
 import '../home_screens/homescreen.dart';
+import '../menu.dart';
 import '../widget_constants/custom_button.dart';
 import 'forgot_password.dart';
 
@@ -159,7 +160,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Homescreen()),
+                        builder: (context) => MenuPage()),
                   );
                 },
               ),

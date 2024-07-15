@@ -4,6 +4,7 @@ import 'package:my_property/favourites_screen/favourites_listing.dart';
 import 'package:my_property/home_screens/homescreen.dart';
 import 'package:my_property/user_profile/profile_screen.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
+import 'intrested_property/intrested_property_listing.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -23,17 +24,18 @@ class _MenuPageState extends State<MenuPage> {
             screen: Homescreen(),
             item: ItemConfig(
               activeForegroundColor: Color(0xFF234F68),
-              icon: Icon(Icons.home),
-              inactiveIcon: Icon(Icons.home_outlined),
+              icon: Image.asset('assets/bottom_bar_icons/2.png', width: 30, height: 30),
+              inactiveIcon: Image.asset('assets/bottom_bar_icons/1.png', width: 30, height: 30),
               title: "Home",
             ),
           ),
+
           PersistentTabConfig(
-            screen: Homescreen(),
+            screen: IntrestedPropertyListingScreen(),
             item: ItemConfig(
               activeForegroundColor: Color(0xFF234F68),
-              icon: Icon(Icons.brightness_auto_rounded),
-              inactiveIcon: Icon(Icons.brightness_auto_outlined),
+              icon: Image.asset('assets/bottom_bar_icons/4.png', width: 30, height: 30),
+              inactiveIcon: Image.asset('assets/bottom_bar_icons/3.png', width: 30, height: 30),
               title: "Home",
             ),
           ),
@@ -41,8 +43,8 @@ class _MenuPageState extends State<MenuPage> {
             screen: FavouritesListingScreen(),
             item: ItemConfig(
               activeForegroundColor: Color(0xFF234F68),
-              icon: Icon(Icons.favorite_rounded),
-              inactiveIcon: Icon(Icons.favorite_border_rounded),
+              icon: Image.asset('assets/bottom_bar_icons/6.png', width: 30, height: 30),
+              inactiveIcon: Image.asset('assets/bottom_bar_icons/5.png', width: 30, height: 30),
               title: "Favorite",
             ),
           ),
@@ -50,8 +52,8 @@ class _MenuPageState extends State<MenuPage> {
             screen: ProfileScreen(),
             item: ItemConfig(
               activeForegroundColor: Color(0xFF234F68),
-              icon: Icon(Icons.person),
-              title: "Settings",
+              icon: Image.asset('assets/bottom_bar_icons/8.png', width: 30, height: 30),
+              inactiveIcon: Image.asset('assets/bottom_bar_icons/7.png', width: 30, height: 30),              title: "Settings",
             ),
           ),
         ],
