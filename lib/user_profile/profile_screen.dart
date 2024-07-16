@@ -42,9 +42,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 70,
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.2),
-                        border: Border.all(color: Colors.transparent), // Border color
+                        border: Border.all(color: Colors.transparent),
                         borderRadius: BorderRadius.circular(
-                            20), // Border radius to make it circular
+                            20),
                       ),
                       child: Row(
                         children: [
