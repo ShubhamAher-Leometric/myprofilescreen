@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/color_constants.dart';
+import '../location_property/location_property.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -27,7 +28,10 @@ class _HomescreenState extends State<Homescreen> {
                   height: 260,
                   width: MediaQuery.of(context).size.width,
                 ),
-                Image.asset('assets/homescreen_circle.png',height: MediaQuery.of(context).size.width/1.4,),
+                Image.asset(
+                  'assets/homescreen_circle.png',
+                  height: MediaQuery.of(context).size.width / 1.4,
+                ),
                 Positioned(
                   top: 50,
                   left: 0,
@@ -174,9 +178,11 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              padding: const EdgeInsets.only(left: 20.0, right: 20),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: SingleChildScrollView(
@@ -196,15 +202,16 @@ class _HomescreenState extends State<Homescreen> {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'all'
                                       ? Color(0xFF234F68)
                                       : Color(0xFFF5F4F8);
                                 },
                               ),
-                              overlayColor: WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                              overlayColor:
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   if (states.contains(WidgetState.pressed)) {
                                     return Color(0xFF234F68).withOpacity(0.8);
                                   }
@@ -212,19 +219,23 @@ class _HomescreenState extends State<Homescreen> {
                                 },
                               ),
                               foregroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'all'
                                       ? Colors.white.withOpacity(0.8)
                                       : Color(0xFF252B5C);
                                 },
                               ),
                             ),
-                            child: Text("All",style: TextStyle(fontSize: 14),),
+                            child: Text(
+                              "All",
+                              style: TextStyle(fontSize: 14),
+                            ),
                           ),
                         ),
                         SizedBox(width: 3),
-                        Container(height: 47,
+                        Container(
+                          height: 47,
                           child: ElevatedButton(
                             onPressed: () {
                               setState(() {
@@ -233,15 +244,16 @@ class _HomescreenState extends State<Homescreen> {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'house'
                                       ? Color(0xFF234F68)
                                       : Color(0xFFF5F4F8);
                                 },
                               ),
-                              overlayColor: WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                              overlayColor:
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   if (states.contains(WidgetState.pressed)) {
                                     return Color(0xFF234F68).withOpacity(0.8);
                                   }
@@ -249,19 +261,23 @@ class _HomescreenState extends State<Homescreen> {
                                 },
                               ),
                               foregroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'house'
                                       ? Colors.white.withOpacity(0.8)
                                       : Color(0xFF252B5C);
                                 },
                               ),
                             ),
-                            child: Text("House",style: TextStyle(fontSize: 14),),
+                            child: Text(
+                              "House",
+                              style: TextStyle(fontSize: 14),
+                            ),
                           ),
                         ),
                         SizedBox(width: 3),
-                        Container(height: 47,
+                        Container(
+                          height: 47,
                           child: ElevatedButton(
                             onPressed: () {
                               setState(() {
@@ -270,15 +286,16 @@ class _HomescreenState extends State<Homescreen> {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'apartment'
                                       ? Color(0xFF234F68)
                                       : Color(0xFFF5F4F8);
                                 },
                               ),
-                              overlayColor: WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                              overlayColor:
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   if (states.contains(WidgetState.pressed)) {
                                     return Color(0xFF234F68).withOpacity(0.8);
                                   }
@@ -286,15 +303,18 @@ class _HomescreenState extends State<Homescreen> {
                                 },
                               ),
                               foregroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'apartment'
                                       ? Colors.white.withOpacity(0.8)
                                       : Color(0xFF252B5C);
                                 },
                               ),
                             ),
-                            child: Text("Apartment",style: TextStyle(fontSize: 14),),
+                            child: Text(
+                              "Apartment",
+                              style: TextStyle(fontSize: 14),
+                            ),
                           ),
                         ),
                         SizedBox(width: 3),
@@ -308,15 +328,16 @@ class _HomescreenState extends State<Homescreen> {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'guest_house'
                                       ? Color(0xFF234F68)
                                       : Color(0xFFF5F4F8);
                                 },
                               ),
-                              overlayColor: WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                              overlayColor:
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   if (states.contains(WidgetState.pressed)) {
                                     return Color(0xFF234F68).withOpacity(0.8);
                                   }
@@ -324,15 +345,18 @@ class _HomescreenState extends State<Homescreen> {
                                 },
                               ),
                               foregroundColor:
-                              WidgetStateProperty.resolveWith<Color>(
-                                    (Set<WidgetState> states) {
+                                  WidgetStateProperty.resolveWith<Color>(
+                                (Set<WidgetState> states) {
                                   return selectedFilter == 'guest_house'
                                       ? Colors.white.withOpacity(0.8)
                                       : Color(0xFF252B5C);
                                 },
                               ),
                             ),
-                            child: Text("Guest House",style: TextStyle(fontSize: 14),),
+                            child: Text(
+                              "Guest House",
+                              style: TextStyle(fontSize: 14),
+                            ),
                           ),
                         ),
                       ],
@@ -341,16 +365,18 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              padding: const EdgeInsets.only(left: 20.0, right: 20),
               child: Container(
                 height: 180,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        itemBuilder: (BuildContext context, int index) {
-                        return Padding(
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
                         padding: EdgeInsets.only(right: 8.0),
                         child: Container(
                           width: 270, // Adjust width as needed
@@ -358,31 +384,31 @@ class _HomescreenState extends State<Homescreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                           ),
-                          child: Stack(
-                            children: [
-                              Image.asset(
-                                'assets/temp_img/hor_scroll.png',
-                               ),
-                              Positioned(
-                            top: 130,
-                            child: Container(
-                              width: 90,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color:Color(0xFF234F68),
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(25),
+                          child: Stack(children: [
+                            Image.asset(
+                              'assets/temp_img/hor_scroll.png',
+                            ),
+                            Positioned(
+                              top: 130,
+                              child: Container(
+                                width: 90,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF234F68),
+                                  borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(25),
+                                  ),
+                                ),
+                                child: Icon(
+                                  Icons.arrow_forward,
+                                  color: apptextcolor,
                                 ),
                               ),
-                              child: Icon(Icons.arrow_forward,color: apptextcolor,),
                             ),
-                            ),
-                            ]
-                          ),
-                         ),
-                        );
-                      }
-                    ),
+                          ]),
+                        ),
+                      );
+                    }),
               ),
             ),
             Padding(
@@ -391,104 +417,178 @@ class _HomescreenState extends State<Homescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Top Locations',style: TextStyle(fontSize: 22,color: apptextcolor2,fontWeight: FontWeight.w700),),
+                  Text(
+                    'Top Locations',
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: apptextcolor2,
+                        fontWeight: FontWeight.w700),
+                  ),
                   Spacer(),
-                  Text('explore',style: TextStyle(fontSize: 16,color: apptextcolor2),
+                  Text(
+                    'explore',
+                    style: TextStyle(fontSize: 16, color: apptextcolor2),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              padding: const EdgeInsets.only(left: 20.0, right: 20),
               child: Align(
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 47,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        child:Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                              child: CircleAvatar(
-                                radius: 20,
-                                backgroundColor: Colors.red,
-                                backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Location_property()));
+                    },
+                    child: Row(
+                      children: [
+                        Container(
+                            height: 47,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(50),
                             ),
-                          SizedBox(width: 8,),
-                          Text('Bali',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
-                          SizedBox(width: 5,)
-                        ],)
-                      ),
-                      SizedBox(width: 10,),
-                      Container(
-                          height: 47,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child:Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20,
-                                  backgroundColor: Colors.red,
-                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Jakarta',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
-                              SizedBox(width: 5,)
-                            ],)
-                      ),
-                      SizedBox(width: 10,),
-                      Container(
-                          height: 47,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child:Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20,
-                                  backgroundColor: Colors.red,
-                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Indonesia',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
-                              SizedBox(width: 5,)
-                            ],)
-                      ),
-                      SizedBox(width: 10,),
-                      Container(
-                          height: 47,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child:Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20,
-                                  backgroundColor: Colors.red,
-                                  backgroundImage:AssetImage( 'assets/temp_img/grid_scroll.png',),),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Maldives',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
-                              SizedBox(width: 5,)
-                            ],)
-                      ),
-                    ],
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
+                                  child: CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.red,
+                                    backgroundImage: AssetImage(
+                                      'assets/temp_img/grid_scroll.png',
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  'Bali',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                )
+                              ],
+                            )),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            height: 47,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
+                                  child: CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.red,
+                                    backgroundImage: AssetImage(
+                                      'assets/temp_img/grid_scroll.png',
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  'Jakarta',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                )
+                              ],
+                            )),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            height: 47,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
+                                  child: CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.red,
+                                    backgroundImage: AssetImage(
+                                      'assets/temp_img/grid_scroll.png',
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  'Indonesia',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                )
+                              ],
+                            )),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            height: 47,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
+                                  child: CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.red,
+                                    backgroundImage: AssetImage(
+                                      'assets/temp_img/grid_scroll.png',
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  'Maldives',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                )
+                              ],
+                            )),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -499,9 +599,17 @@ class _HomescreenState extends State<Homescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Featured Properties',style: TextStyle(fontSize: 22,color: apptextcolor2,fontWeight: FontWeight.w700),),
+                  Text(
+                    'Featured Properties',
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: apptextcolor2,
+                        fontWeight: FontWeight.w700),
+                  ),
                   Spacer(),
-                  Text('explore',style: TextStyle(fontSize: 16,color: apptextcolor2),
+                  Text(
+                    'explore',
+                    style: TextStyle(fontSize: 16, color: apptextcolor2),
                   ),
                 ],
               ),
@@ -512,17 +620,20 @@ class _HomescreenState extends State<Homescreen> {
       ),
     );
   }
+
   Widget itemGrid(double width) {
     const int count = 6;
     const int itemsPerRow = 2;
     const double ratio = 1 / 1.7;
     const double horizontalPadding = 0;
-    final double calcHeight = ((width / itemsPerRow) - (horizontalPadding)) * (count / itemsPerRow).ceil() * (1 / ratio);
+    final double calcHeight = ((width / itemsPerRow) - (horizontalPadding)) *
+        (count / itemsPerRow).ceil() *
+        (1 / ratio);
     return SizedBox(
       width: width,
       height: calcHeight,
       child: Padding(
-        padding: const EdgeInsets.only(left: 20.0,right: 20.0),
+        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
         child: GridView.builder(
           padding: const EdgeInsets.symmetric(horizontal: horizontalPadding),
           itemCount: count,
@@ -558,25 +669,30 @@ class _HomescreenState extends State<Homescreen> {
                           ),
                         ),
                         Positioned(
-                            top: 5,
-                            right: 5,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: appprimary,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(Icons.favorite_rounded,size:16,color: apptextcolor,),
+                          top: 5,
+                          right: 5,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: appprimary,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.favorite_rounded,
+                                size: 16,
+                                color: apptextcolor,
                               ),
                             ),
+                          ),
                         ),
                         Positioned(
                           bottom: 5,
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0,right: 10.0),
+                            padding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Container(
-                              width: MediaQuery.of(context).size.width/2.8,
+                              width: MediaQuery.of(context).size.width / 2.8,
                               child: Row(
                                 children: [
                                   Container(
@@ -587,8 +703,14 @@ class _HomescreenState extends State<Homescreen> {
                                     ),
                                     child: Center(
                                       child: Padding(
-                                        padding: const EdgeInsets.only(left: 7.0,right: 7.0),
-                                        child: Text('House',style: TextStyle(color: apptextcolor,fontSize: 10),),
+                                        padding: const EdgeInsets.only(
+                                            left: 7.0, right: 7.0),
+                                        child: Text(
+                                          'House',
+                                          style: TextStyle(
+                                              color: apptextcolor,
+                                              fontSize: 10),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -601,8 +723,14 @@ class _HomescreenState extends State<Homescreen> {
                                     ),
                                     child: Center(
                                       child: Padding(
-                                        padding: const EdgeInsets.only(left: 7.0,right: 7.0),
-                                        child: Text('\$ 220',style: TextStyle(color: apptextcolor,fontSize: 12),),
+                                        padding: const EdgeInsets.only(
+                                            left: 7.0, right: 7.0),
+                                        child: Text(
+                                          '\$ 220',
+                                          style: TextStyle(
+                                              color: apptextcolor,
+                                              fontSize: 12),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -611,7 +739,6 @@ class _HomescreenState extends State<Homescreen> {
                             ),
                           ),
                         ),
-
                       ],
                     ),
                   ),
@@ -620,8 +747,16 @@ class _HomescreenState extends State<Homescreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 10,),
-                      Text('Wings Tower',style: TextStyle(fontSize: 18,color: apptextcolor2,fontWeight: FontWeight.w700),),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Wings Tower',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: apptextcolor2,
+                            fontWeight: FontWeight.w700),
+                      ),
                     ],
                   ),
                   Spacer(),
@@ -631,16 +766,27 @@ class _HomescreenState extends State<Homescreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        SizedBox(width: 10,),
-                        Icon(Icons.location_on,color: apptextcolor2,size: 14,),
-                        Text('Jakarta, Indonesia',style: TextStyle(fontSize: 14,color: apptextcolor2,fontWeight: FontWeight.w400),),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.location_on,
+                          color: apptextcolor2,
+                          size: 14,
+                        ),
+                        Text(
+                          'Jakarta, Indonesia',
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: apptextcolor2,
+                              fontWeight: FontWeight.w400),
+                        ),
                       ],
                     ),
                   ),
                   Spacer(),
                 ],
               ),
-
             );
           },
         ),
