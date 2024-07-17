@@ -14,7 +14,7 @@ class CustomAppbarBackButton extends StatelessWidget {
       ),
       child: IconButton(
         icon: const Icon(
-          Icons.arrow_back_ios,
+          Icons.arrow_back_ios_new_rounded,
           size: 20, // Adjust size as needed
         ),
         onPressed: () {

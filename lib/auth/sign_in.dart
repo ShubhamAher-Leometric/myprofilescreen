@@ -139,13 +139,16 @@ class _SignInState extends State<Sign_in> {
                 color: appprimary,
                 textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
-                onPressed: (){
-                  Navigator.push(
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MenuPage()),
+                      builder: (context) => MenuPage(),
+                    ),
+                        (Route<dynamic> route) => false,
                   );
                 },
+
               ),
             ),
             Spacer(),

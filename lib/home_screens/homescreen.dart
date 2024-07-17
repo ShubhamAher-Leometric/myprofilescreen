@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_property/location_property/location_listing.dart';
 
 import '../constants/color_constants.dart';
+import '../location_property/featured_property_search_list.dart';
 import '../location_property/location_property.dart';
 
 class Homescreen extends StatefulWidget {
@@ -425,9 +427,18 @@ class _HomescreenState extends State<Homescreen> {
                         fontWeight: FontWeight.w700),
                   ),
                   Spacer(),
-                  Text(
-                    'explore',
-                    style: TextStyle(fontSize: 16, color: apptextcolor2),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LocationListingScreen()),
+                      );
+                    },
+                    child: Text(
+                      'explore',
+                      style: TextStyle(fontSize: 16, color: apptextcolor2),
+                    ),
                   ),
                 ],
               ),
@@ -607,9 +618,17 @@ class _HomescreenState extends State<Homescreen> {
                         fontWeight: FontWeight.w700),
                   ),
                   Spacer(),
-                  Text(
-                    'explore',
-                    style: TextStyle(fontSize: 16, color: apptextcolor2),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FeaturedPropertySearchListScreen()));
+                    },
+                    child: Text(
+                      'explore',
+                      style: TextStyle(fontSize: 16, color: apptextcolor2),
+                    ),
                   ),
                 ],
               ),
