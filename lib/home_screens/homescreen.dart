@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_property/home_screens/notification_page.dart';
 import 'package:my_property/location_property/location_listing.dart';
 
 import '../constants/color_constants.dart';
@@ -69,18 +70,27 @@ class _HomescreenState extends State<Homescreen> {
                           ),
                         ),
                         Spacer(),
-                        Container(
-                          height: 49,
-                          width: 49,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(50),
-                            border: Border.all(
-                              color: appprimary,
-                              width: 1.0,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NotificationPage()),
+                            );
+                          },
+                          child: Container(
+                            height: 49,
+                            width: 49,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                              border: Border.all(
+                                color: appprimary,
+                                width: 1.0,
+                              ),
                             ),
+                            child: Icon(Icons.notifications, size: 20),
                           ),
-                          child: Icon(Icons.notifications, size: 20),
                         ),
                         SizedBox(width: 10),
                         Container(
