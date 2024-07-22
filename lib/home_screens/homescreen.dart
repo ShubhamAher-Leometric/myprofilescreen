@@ -5,6 +5,7 @@ import 'package:my_property/location_property/location_listing.dart';
 import '../constants/color_constants.dart';
 import '../location_property/featured_property_search_list.dart';
 import '../location_property/location_property.dart';
+import '../location_property/property_details.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -392,18 +393,27 @@ class _HomescreenState extends State<Homescreen> {
                             ),
                             Positioned(
                               top: 130,
-                              child: Container(
-                                width: 90,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFF234F68),
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(25),
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => PropertyDetailsPage()),
+                                  );
+                                },
+                                child: Container(
+                                  width: 90,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF234F68),
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(25),
+                                    ),
                                   ),
-                                ),
-                                child: Icon(
-                                  Icons.arrow_forward,
-                                  color: apptextcolor,
+                                  child: Icon(
+                                    Icons.arrow_forward,
+                                    color: apptextcolor,
+                                  ),
                                 ),
                               ),
                             ),
