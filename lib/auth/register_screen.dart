@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/color_constants.dart';
+import '../constants/prefs_helper.dart';
 import '../home_screens/homescreen.dart';
 import '../menu.dart';
 import '../widget_constants/custom_button.dart';
@@ -156,7 +157,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 color: appprimary,
                 textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
-                onPressed: (){
+                onPressed: () async {
+                  await saveUserRole(false);
                   Navigator.push(
                     context,
                     MaterialPageRoute(

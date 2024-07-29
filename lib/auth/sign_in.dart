@@ -6,6 +6,7 @@ import 'package:my_property/home_screens/homescreen.dart';
 import 'package:my_property/menu.dart';
 
 import '../constants/color_constants.dart';
+import '../constants/prefs_helper.dart';
 import '../widget_constants/custom_button.dart';
 
 class Sign_in extends StatefulWidget {
@@ -151,7 +152,8 @@ class _SignInState extends State<Sign_in> {
                 color: appprimary,
                 textColor: apptextcolor,
                 size: MediaQuery.of(context).size.width / 2,
-                onPressed: () {
+                onPressed: () async {
+                  await saveUserRole(true);
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(

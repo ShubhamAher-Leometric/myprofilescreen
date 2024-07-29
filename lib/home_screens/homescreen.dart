@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_property/constants/prefs_helper.dart';
 import 'package:my_property/home_screens/notification_page.dart';
 import 'package:my_property/location_property/location_listing.dart';
 
@@ -17,7 +18,19 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   String selectedFilter = 'all';
+  bool? _isAgent;
 
+  @override
+  void initState() {
+    super.initState();
+    _loadUserRole();
+  }
+  Future<void> _loadUserRole() async {
+    bool? isAgent = await getUserRole();
+    setState(() {
+      _isAgent = isAgent;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
@@ -58,7 +71,7 @@ class _HomescreenState extends State<Homescreen> {
                             children: [
                               Icon(
                                 Icons.location_on,
-                                color: appprimary,
+                                color: _isAgent! ? appprimary : agentPrimaryColor,
                                 size: 20, // Adjust size as needed
                               ),
                               Text('Pune'),
