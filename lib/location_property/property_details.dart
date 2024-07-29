@@ -13,6 +13,7 @@ class PropertyDetailsPage extends StatefulWidget {
 
 class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
   final PageController _pageController = PageController();
+
   @override
   void initState() {
     super.initState();
@@ -32,17 +33,25 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                     height: 40,
                   ),
                   buildAutoScrollingContainer(),
-                  Row(children: [
-                    Text('Wings Tower',   style: TextStyle(
-                        fontSize: 22,
-                        color: apptextcolor2,
-                        fontWeight: FontWeight.w700),),
-                    Spacer(),
-                    Text('\$ 220'  , style: TextStyle(
-                        fontSize: 22,
-                        color: apptextcolor2,
-                        fontWeight: FontWeight.w700),),
-                  ],),
+                  Row(
+                    children: [
+                      Text(
+                        'Wings Tower',
+                        style: TextStyle(
+                            fontSize: 22,
+                            color: apptextcolor2,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      Spacer(),
+                      Text(
+                        '\$ 220',
+                        style: TextStyle(
+                            fontSize: 22,
+                            color: apptextcolor2,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ],
+                  ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -67,19 +76,18 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                   Row(
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width/2.8,
-                        height: 55,
+                        width: MediaQuery.of(context).size.width / 2.9,
+                        height: 50,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,
                                 backgroundColor: appprimary,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
+                                    borderRadius: BorderRadius.circular(20)),
                                 textStyle: const TextStyle(
-                                  fontFamily: 'MavenPro',
                                   fontSize: 20,
                                 )),
-                            onPressed: (){},
+                            onPressed: () {},
                             child: Center(
                               child: Text(
                                 'i am intrested',
@@ -92,7 +100,7 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                       ),
                       Spacer(),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -106,10 +114,12 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                             color: appprimary,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: Image.asset('assets/360.png',),
+                          child: Image.asset(
+                            'assets/360.png',
+                          ),
                         ),
                       ),
-                  ],
+                    ],
                   ),
                   SizedBox(
                     height: 10,
@@ -135,7 +145,8 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(14.0),
-                                      child: Image.asset('assets/details_icon/img.png'),
+                                      child: Image.asset(
+                                          'assets/details_icon/img.png'),
                                     ),
                                     Text(
                                       '2 Bedroom',
@@ -161,7 +172,8 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(14.0),
-                                      child: Image.asset('assets/details_icon/img_1.png'),
+                                      child: Image.asset(
+                                          'assets/details_icon/img_1.png'),
                                     ),
                                     Text(
                                       '1 Bathroom',
@@ -187,7 +199,8 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(14.0),
-                                      child: Image.asset('assets/details_icon/img_2.png'),
+                                      child: Image.asset(
+                                          'assets/details_icon/img_2.png'),
                                     ),
                                     Text(
                                       'Hot Water',
@@ -214,18 +227,22 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('Description',   style: TextStyle(
-                          fontSize: 20,
-                          color: apptextcolor2,
-                          fontWeight: FontWeight.w700),
+                      Text(
+                        'Description',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: apptextcolor2,
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                      'Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, '
+                  Text(
+                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+                      'Lorem Ipsum has been the industry'
+                      's standard dummy text ever since the 1500s, '
                       'when an unknown printer toLorem Ipsum is simply dummy text of the printing and typesetting industry.'),
                   SizedBox(
                     height: 10,
@@ -233,41 +250,51 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('Location',   style: TextStyle(
-                          fontSize: 20,
-                          color: apptextcolor2,
-                          fontWeight: FontWeight.w700),
+                      Text(
+                        'Location',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: apptextcolor2,
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                    Column(
-                      children: [
-                        Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
-                        ),
-                        child: IconButton(
-                          icon: const Icon(
-                            Icons.location_on_outlined,
-                            size: 25, // Adjust size as needed
+                      Column(
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(
+                                  50), // Adjust the radius as needed
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.location_on_outlined,
+                                size: 25, // Adjust size as needed
+                              ),
+                              onPressed: () {},
+                            ),
                           ),
-                          onPressed: () {},
-                        ),
+                        ],
                       ),
-                      ],
-                    ),
-                      SizedBox(width: 20,),
+                      SizedBox(
+                        width: 20,
+                      ),
                       Expanded(
-                        child: Column(children: [
-                          Text('St. Cikoko Timur, Kec. Pancoran, Jakarta Selatan, Indonesia 12770',
-                            style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),)
-                        ],),
+                        child: Column(
+                          children: [
+                            Text(
+                              'St. Cikoko Timur, Kec. Pancoran, Jakarta Selatan, Indonesia 12770',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -286,7 +313,7 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
               ),
               delegate: SliverChildBuilderDelegate(
                 childCount: 5,
-                    (context, index) {
+                (context, index) {
                   return Container(
                     decoration: BoxDecoration(
                       color: Color(0xFFF5F4F8),
@@ -331,17 +358,19 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                               Positioned(
                                 bottom: 5,
                                 child: Padding(
-                                  padding:
-                                  const EdgeInsets.only(left: 10.0, right: 10.0),
+                                  padding: const EdgeInsets.only(
+                                      left: 10.0, right: 10.0),
                                   child: Container(
-                                    width: MediaQuery.of(context).size.width / 2.8,
+                                    width:
+                                        MediaQuery.of(context).size.width / 2.8,
                                     child: Row(
                                       children: [
                                         Container(
                                           height: 25,
                                           decoration: BoxDecoration(
                                             color: appbgSecondary,
-                                            borderRadius: BorderRadius.circular(8),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                           ),
                                           child: Center(
                                             child: Padding(
@@ -361,7 +390,8 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                                           height: 25,
                                           decoration: BoxDecoration(
                                             color: appbgSecondary,
-                                            borderRadius: BorderRadius.circular(8),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                           ),
                                           child: Center(
                                             child: Padding(
@@ -434,10 +464,11 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
               ),
             ),
           ],
-            ),
+        ),
       ),
     );
   }
+
   Widget buildAutoScrollingContainer() {
     final PageController pageController = PageController();
     int numPages = 3;
@@ -446,14 +477,17 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
       Future.delayed(Duration(seconds: 3)).then((_) {
         if (pageController.hasClients && numPages > 0) {
           int nextPage = (pageController.page!.toInt() + 1) % numPages;
-          pageController.animateToPage(
-            nextPage,
-            duration: Duration(milliseconds: 300),
-            curve: Curves.easeIn,
-          ).then((_) => autoScroll());
+          pageController
+              .animateToPage(
+                nextPage,
+                duration: Duration(milliseconds: 300),
+                curve: Curves.easeIn,
+              )
+              .then((_) => autoScroll());
         }
       });
     }
+
     autoScroll();
 
     return Stack(
@@ -490,34 +524,35 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
           ],
         ),
         Positioned(
-          top: 10,
+          top: 20,
           left: 0,
           right: 0,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               children: [
                 Container(
-    height: 50,
-    width: 50,
-    decoration: BoxDecoration(
-    color: Colors.white,
-    borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
-    ),
-    child: IconButton(
-    icon: const Icon(
-    Icons.arrow_back_ios_new_rounded,
-    size: 20, // Adjust size as needed
-    ),
-    onPressed: () {
-    Navigator.pop(context);
-    },
-    ),
-    ),
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(
+                        50), // Adjust the radius as needed
+                  ),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      size: 20, // Adjust size as needed
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
                 Spacer(),
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     color: appprimary,
                     borderRadius: BorderRadius.circular(50),

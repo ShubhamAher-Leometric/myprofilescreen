@@ -27,8 +27,11 @@ class _SignInState extends State<Sign_in> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 150,
+              height: 40,
             ),
+            Container(
+                height: 110,
+                child: Image.asset('assets/undraw_city_life_gnpr 1.png')),
             RichText(
               text: TextSpan(
                 style: TextStyle(
@@ -72,7 +75,9 @@ class _SignInState extends State<Sign_in> {
                     hintText: "Email",
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.email),
-                    contentPadding: EdgeInsets.symmetric(vertical: 17.0, horizontal: 0.0), // Adjusted horizontal padding
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 17.0,
+                        horizontal: 0.0), // Adjusted horizontal padding
                   ),
                 ),
               ),
@@ -95,15 +100,17 @@ class _SignInState extends State<Sign_in> {
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _isObscured ? Icons.visibility_off : Icons.visibility,
+                        Icons.lock,
                       ),
                       onPressed: () {
                         setState(() {
-                          _isObscured = !_isObscured;
+                          // _isObscured = !_isObscured;
                         });
                       },
                     ),
-                    contentPadding: EdgeInsets.symmetric(vertical: 17.0, horizontal: 0.0), // Adjusted horizontal padding
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 17.0,
+                        horizontal: 0.0), // Adjusted horizontal padding
                   ),
                 ),
               ),
@@ -114,10 +121,15 @@ class _SignInState extends State<Sign_in> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(child: Text("Forgot password?"),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ResetPassword()));
-                },),
+                GestureDetector(
+                  child: Text("Forgot password?"),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ResetPassword()));
+                  },
+                ),
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -145,10 +157,9 @@ class _SignInState extends State<Sign_in> {
                     MaterialPageRoute(
                       builder: (context) => MenuPage(),
                     ),
-                        (Route<dynamic> route) => false,
+                    (Route<dynamic> route) => false,
                   );
                 },
-
               ),
             ),
             Spacer(),
@@ -156,29 +167,34 @@ class _SignInState extends State<Sign_in> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Don\'t have an account? ', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black,
-                ),
+                Text(
+                  'Don\'t have an account? ',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                  ),
                 ),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => RegisterScreen()),
+                      MaterialPageRoute(builder: (context) => RegisterScreen()),
                     );
                   },
-                  child: Text('Register',style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  child: Text(
+                    'Register',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),

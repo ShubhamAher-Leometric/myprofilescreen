@@ -105,41 +105,42 @@ class _Otp_screenState extends State<Otp_screen> {
                       },
                     ),
                   ),
-
+                  SizedBox(height: 200,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 30,
+                            width: 80,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.punch_clock,
+                                  size: 20, // Adjust size as needed
+                                ),
+                                Text('00:20'),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10,),
+                          Text('Didn’t receive the OTP? Resend OTP'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30,),
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                              height: 30,
-                              width: 80,
-                              decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50), // Adjust the radius as needed
-                              ),
-                              child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.punch_clock,
-                        size: 20, // Adjust size as needed
-                      ),
-                      Text('00:20'),
-                    ],
-                              ),
-                              ),
-                    SizedBox(height: 10,),
-                    Text('Didn’t receive the OTP? Resend OTP'),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(height: 30,),
+
           ],
         ),
       ),

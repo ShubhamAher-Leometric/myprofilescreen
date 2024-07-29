@@ -36,9 +36,9 @@ class _VideoScreenState extends State<VideoScreen> {
       body: Center(
         child: _controller.value.isInitialized
             ? AspectRatio(
-          aspectRatio: _controller.value.aspectRatio,
-          child: VideoPlayer(_controller),
-        )
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              )
             : CircularProgressIndicator(),
       ),
     );

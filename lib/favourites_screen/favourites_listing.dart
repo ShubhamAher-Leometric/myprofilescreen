@@ -50,7 +50,7 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                       child: Icon(Icons.delete, color: Colors.white),
                     ),
                     confirmDismiss: (direction) async {
-                     return true;
+                      return true;
                     },
                     onDismissed: (direction) {},
                     key: const Key(''),
@@ -70,10 +70,13 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                   child: Stack(
                                     children: [
                                       Container(
-                                        width: MediaQuery.of(context).size.width / 1.9,
-                                        height: 155,
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                2.3,
+                                        height: 140,
                                         child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(25),
+                                          borderRadius:
+                                              BorderRadius.circular(25),
                                           child: Image.asset(
                                             'assets/splash_1.png',
                                             fit: BoxFit.cover,
@@ -86,7 +89,8 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             color: appprimary,
-                                            borderRadius: BorderRadius.circular(50),
+                                            borderRadius:
+                                                BorderRadius.circular(50),
                                           ),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
@@ -103,6 +107,9 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              width: 10,
+                            ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -111,11 +118,12 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
-                                     width:MediaQuery.of(context).size.width / 3.2,
+                                      width: MediaQuery.of(context).size.width /
+                                          3.2,
                                       child: Text(
                                         'Flower Heaven House',
                                         style: TextStyle(
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             color: apptextcolor2,
                                             fontWeight: FontWeight.w700),
                                         maxLines: 2,
@@ -130,7 +138,8 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                 Padding(
                                   padding: const EdgeInsets.only(bottom: 4.0),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Column(
@@ -138,19 +147,21 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                                           Icon(
                                             Icons.location_on,
                                             color: apptextcolor2,
-                                            size: 14,
+                                            size: 12,
                                           ),
                                         ],
                                       ),
                                       Column(
                                         children: [
                                           Container(
-                                            width:
-                                                MediaQuery.of(context).size.width / 3.4,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                3.4,
                                             child: Text(
                                               'Jakarta, Indonesia',
                                               style: TextStyle(
-                                                  fontSize: 14,
+                                                  fontSize: 10,
                                                   color: apptextcolor2,
                                                   fontWeight: FontWeight.w400),
                                               maxLines: 2,
@@ -193,8 +204,7 @@ class _FavouritesListingScreenState extends State<FavouritesListingScreen> {
                   ),
                 ),
               );
-            }
-            ),
+            }),
       ),
     );
   }

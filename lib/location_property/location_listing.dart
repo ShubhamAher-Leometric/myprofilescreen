@@ -18,23 +18,43 @@ class _LocationListingScreenState extends State<LocationListingScreen> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(children: [
-              CustomAppbarBackButton(),
-            ],),
+            child: Row(
+              children: [
+                CustomAppbarBackButton(),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-             Row(children: [
-               Text('Top Locations',style: TextStyle(fontSize: 22,color: apptextcolor2,fontWeight: FontWeight.w700),),
-             ],),
-                Row(children: [
-                  Text('Find the best recommendations place to live',style: TextStyle(fontSize: 12,color: apptextcolor2,fontWeight: FontWeight.w700),),
-                ],),
+                Row(
+                  children: [
+                    Text(
+                      'Top Locations',
+                      style: TextStyle(
+                          fontSize: 22,
+                          color: apptextcolor2,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Find the best recommendations place to live',
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: apptextcolor2,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -89,12 +109,11 @@ class _LocationListingScreenState extends State<LocationListingScreen> {
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
-                                    '#${index + 1}',
+                                      '#${index + 1}',
                                       style: TextStyle(
                                           fontSize: 12,
                                           color: apptextcolor,
-                                          fontWeight: FontWeight.bold
-                                      ),
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ),
                                 ),

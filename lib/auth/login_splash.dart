@@ -22,7 +22,7 @@ class _Login_splashState extends State<Login_splash> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height:MediaQuery.of(context).size.height/2,
+              height:MediaQuery.of(context).size.height/1.9,
               child: GridView(
                 physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -82,7 +82,7 @@ class _Login_splashState extends State<Login_splash> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 40,
             ),
             Center(
               child: Padding(
