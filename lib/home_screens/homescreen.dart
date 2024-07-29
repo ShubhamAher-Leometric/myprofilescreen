@@ -18,7 +18,7 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   String selectedFilter = 'all';
-  bool? _isAgent;
+  bool _isAgent = true;
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _HomescreenState extends State<Homescreen> {
   Future<void> _loadUserRole() async {
     bool? isAgent = await getUserRole();
     setState(() {
-      _isAgent = isAgent;
+      _isAgent = isAgent!;
     });
   }
   @override

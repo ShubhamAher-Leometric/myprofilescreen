@@ -7,7 +7,6 @@ Future<void> saveUserRole(bool isUser) async {
   print('Logging You As : ' + (isUser ? 'User' : 'Not User'));
 }
 
-
 // Function to retrieve user role as boolean from SharedPreferences
 Future<bool?> getUserRole() async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
