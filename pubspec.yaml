@@ -35,8 +35,9 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   flutter_pdfview: ^1.0.3
   flutter_cached_pdfview: ^0.4.1
-  path_provider: ^2.0.11
-  video_player: ^2.9.1
+#  path_provider: ^2.0.11
+#  vr_player: ^0.2.2
+  youtube_player_flutter: ^9.0.1
   
 
   # The following adds the Cupertino Icons font to your application.

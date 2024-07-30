@@ -104,7 +104,7 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => VideoScreen()),
+                                builder: (context) => YoutubePlayerDemoApp()),
                           );
                         },
                         child: Container(
