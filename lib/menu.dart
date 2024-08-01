@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'AgentScreens/agent_favourites_screen/agent_favourites_listing.dart';
+import 'AgentScreens/agent_home_screens/agent_homescreen.dart';
+import 'AgentScreens/agent_intrested_property/agent_intrested_property_listing.dart';
+import 'AgentScreens/agent_user_profile/profile_screen.dart';
 import 'UserScreens/constants/prefs_helper.dart';
 import 'UserScreens/favourites_screen/favourites_listing.dart';
 import 'UserScreens/home_screens/homescreen.dart';
@@ -37,10 +41,10 @@ class _MenuPageState extends State<MenuPage> {
     ProfileScreen(),
   ];
   final List<Widget> _agentscreens = [
-    Container(color: Colors.red,),
-    Container(color: Colors.blue,),
-    Container(color: Colors.green,),
-    Container(color: Colors.yellow,),
+    AgentHomescreen(),
+    AgentIntrestedPropertyListingScreen(),
+    AgentFavouritesListingScreen(),
+    AgentProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
