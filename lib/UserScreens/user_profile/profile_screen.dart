@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/constants/color_constants.dart';
-import 'package:my_property/widget_constants/custom_button.dart';
+import '../constants/color_constants.dart';
+import '../widget_constants/custom_button.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

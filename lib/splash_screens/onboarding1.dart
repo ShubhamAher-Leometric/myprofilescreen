@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_property/splash_screens/onboarding2.dart';
 
-import '../constants/color_constants.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
+
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});

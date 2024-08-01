@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_property/auth/forgot_password.dart';
-import 'package:my_property/auth/otp_screen.dart';
 import 'package:my_property/auth/register_screen.dart';
-import 'package:my_property/home_screens/homescreen.dart';
 import 'package:my_property/menu.dart';
 
-import '../constants/color_constants.dart';
-import '../constants/prefs_helper.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/constants/prefs_helper.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
 
 class Sign_in extends StatefulWidget {
   const Sign_in({super.key});

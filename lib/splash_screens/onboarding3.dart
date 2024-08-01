@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_property/auth/login_splash.dart';
 
-import '../constants/color_constants.dart';
-import '../widget_constants/back_button.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/widget_constants/back_button.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
+
 
 class Screen4 extends StatefulWidget {
   const Screen4({super.key});

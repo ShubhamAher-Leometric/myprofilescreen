@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_property/favourites_screen/favourites_listing.dart';
-import 'package:my_property/home_screens/homescreen.dart';
-import 'package:my_property/user_profile/profile_screen.dart';
-import 'package:my_property/intrested_property/intrested_property_listing.dart';
+
+import 'UserScreens/constants/prefs_helper.dart';
+import 'UserScreens/favourites_screen/favourites_listing.dart';
+import 'UserScreens/home_screens/homescreen.dart';
+import 'UserScreens/intrested_property/intrested_property_listing.dart';
+import 'UserScreens/user_profile/profile_screen.dart';
+
 
 class MenuPage extends StatefulWidget {
   const MenuPage({Key? key}) : super(key: key);
@@ -13,12 +16,31 @@ class MenuPage extends StatefulWidget {
 
 class _MenuPageState extends State<MenuPage> {
   int _selectedIndex = 0;
+  bool _isAgent = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserRole();
+  }
+  Future<void> _loadUserRole() async {
+    bool? isAgent = await getUserRole();
+    setState(() {
+      _isAgent = isAgent!;
+    });
+  }
 
   final List<Widget> _screens = [
     Homescreen(),
     IntrestedPropertyListingScreen(),
     FavouritesListingScreen(),
     ProfileScreen(),
+  ];
+  final List<Widget> _agentscreens = [
+    Container(color: Colors.red,),
+    Container(color: Colors.blue,),
+    Container(color: Colors.green,),
+    Container(color: Colors.yellow,),
   ];
 
   void _onItemTapped(int index) {
@@ -57,8 +79,9 @@ class _MenuPageState extends State<MenuPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: _screens[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
+        body: _isAgent! ? _screens[_selectedIndex] : _agentscreens[_selectedIndex],
+        bottomNavigationBar: _isAgent! ?
+        BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed, // Disable animations
@@ -78,7 +101,32 @@ class _MenuPageState extends State<MenuPage> {
               label: '', // No label
             ),
             BottomNavigationBarItem(
-              icon: _buildIcon('assets/bottom_bar_icons/8.png', 'assets/bottom_bar_icons/7.png', 3),
+              icon: _buildIcon('assets/bottom_bar_icons/img.png', 'assets/bottom_bar_icons/7.png', 3),
+              label: '', // No label
+            ),
+          ],
+        ):
+        BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed, // Disable animations
+          showUnselectedLabels: false,
+          showSelectedLabels: false,
+          items: [
+            BottomNavigationBarItem(
+              icon: _buildIcon('assets/bottom_bar_icons/2.png', 'assets/bottom_bar_icons/1.png', 0),
+              label: '', // No label
+            ),
+            BottomNavigationBarItem(
+              icon: _buildIcon('assets/bottom_bar_icons/4.png', 'assets/bottom_bar_icons/3.png', 1),
+              label: '', // No label
+            ),
+            BottomNavigationBarItem(
+              icon: _buildIcon('assets/bottom_bar_icons/appointment_filled.png', 'assets/bottom_bar_icons/appointment_unfilled.png', 2),
+              label: '', // No label
+            ),
+            BottomNavigationBarItem(
+              icon: _buildIcon('assets/bottom_bar_icons/img.png', 'assets/bottom_bar_icons/7.png', 3),
               label: '', // No label
             ),
           ],

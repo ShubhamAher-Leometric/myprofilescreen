@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/intrested_property/view_purchase_order_screen.dart';
-
+import 'package:my_property/UserScreens/intrested_property/view_purchase_order_screen.dart';
 import '../constants/color_constants.dart';
 
 class IntrestedPropertyListingScreen extends StatefulWidget {

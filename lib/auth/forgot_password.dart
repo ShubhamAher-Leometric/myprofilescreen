@@ -2,9 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_property/auth/otp_screen.dart';
 import 'package:my_property/auth/register_screen.dart';
-
-import '../constants/color_constants.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
 
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_property/location_property/property_details.dart';
+import 'package:my_property/UserScreens/location_property/property_details.dart';
 
 import '../constants/color_constants.dart';
 import '../widget_constants/cutom_appbar_button.dart';

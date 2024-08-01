@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/constants/prefs_helper.dart';
-import 'package:my_property/home_screens/notification_page.dart';
-import 'package:my_property/location_property/location_listing.dart';
-
 import '../constants/color_constants.dart';
+import '../constants/prefs_helper.dart';
 import '../location_property/featured_property_search_list.dart';
+import '../location_property/location_listing.dart';
 import '../location_property/location_property.dart';
 import '../location_property/property_details.dart';
+import 'notification_page.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});

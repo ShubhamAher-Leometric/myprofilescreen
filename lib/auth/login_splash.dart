@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_property/auth/register_screen.dart';
 import 'package:my_property/auth/sign_in.dart';
 
-import '../constants/color_constants.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
 
 class Login_splash extends StatefulWidget {
   const Login_splash({super.key});

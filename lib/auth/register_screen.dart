@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/color_constants.dart';
-import '../constants/prefs_helper.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/constants/prefs_helper.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
 import '../menu.dart';
-import '../widget_constants/custom_button.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

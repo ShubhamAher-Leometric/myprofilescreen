@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_property/constants/color_constants.dart';
-import 'package:my_property/location_property/video_screen.dart';
+import 'package:my_property/UserScreens/location_property/video_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../constants/color_constants.dart';
 
 class PropertyDetailsPage extends StatefulWidget {
   const PropertyDetailsPage({super.key});

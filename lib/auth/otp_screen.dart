@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_property/auth/set_new_password.dart';
 import 'package:pinput/pinput.dart';
 
-import '../constants/color_constants.dart';
-import '../widget_constants/custom_button.dart';
+import '../UserScreens/constants/color_constants.dart';
+import '../UserScreens/widget_constants/custom_button.dart';
 
 class Otp_screen extends StatefulWidget {
   const Otp_screen({super.key});
