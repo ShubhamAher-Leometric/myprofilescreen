@@ -158,10 +158,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   size: MediaQuery.of(context).size.width / 2,
                   onPressed: () async {
                     await saveUserRole(false);
-                    Navigator.push(
+                    Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => MenuPage()),
+                        builder: (context) => MenuPage(),
+                      ),
+                          (Route<dynamic> route) => false,
                     );
                   },
                 ),
