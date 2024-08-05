@@ -23,11 +23,12 @@ class _Login_splashState extends State<Login_splash> {
             children: [
               Row(
                 children: [
+                  Spacer(),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width/2-30,
-                      height: MediaQuery.of(context).size.width/2-30,
+                      width: MediaQuery.of(context).size.width/2-40,
+                      height: MediaQuery.of(context).size.width/2-40,
                       child: Image.asset(
                         "assets/splash_1.png",
                         fit: BoxFit.cover,
@@ -38,24 +39,26 @@ class _Login_splashState extends State<Login_splash> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width/2-30,
-                      height: MediaQuery.of(context).size.width/2-30,
+                      width: MediaQuery.of(context).size.width/2-40,
+                      height: MediaQuery.of(context).size.width/2-40,
                       child: Image.asset(
                         "assets/splash_1.png",
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
+                  Spacer(),
                 ],
               ),
               SizedBox(height: 20,),
               Row(
                 children: [
+                  Spacer(),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width/2-30,
-                      height: MediaQuery.of(context).size.width/2-30,
+                      width: MediaQuery.of(context).size.width/2-40,
+                      height: MediaQuery.of(context).size.width/2-40,
                       child: Image.asset(
                         "assets/splash_1.png",
                         fit: BoxFit.cover,
@@ -66,18 +69,18 @@ class _Login_splashState extends State<Login_splash> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width/2-30,
-                      height: MediaQuery.of(context).size.width/2-30,
+                      width: MediaQuery.of(context).size.width/2-40,
+                      height: MediaQuery.of(context).size.width/2-40,
                       child: Image.asset(
                         "assets/splash_1.png",
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
+                  Spacer(),
                 ],
               ),
               SizedBox(height: 20,),
-
               // Container(
               //   height:MediaQuery.of(context).size.height/1.7,
               //   child: GridView(

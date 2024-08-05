@@ -92,7 +92,7 @@ class _LocationPropertyState extends State<Location_property> {
                                     child: Stack(
                                       children: [
                                         Container(
-                                          width: MediaQuery.of(context).size.width / 1.9,
+                                          width: MediaQuery.of(context).size.width / 2.2,
                                           height: 155,
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(25),
@@ -125,6 +125,7 @@ class _LocationPropertyState extends State<Location_property> {
                                   ),
                                 ],
                               ),
+                              SizedBox(width: 10,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

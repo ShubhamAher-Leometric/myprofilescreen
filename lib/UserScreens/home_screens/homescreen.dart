@@ -70,13 +70,14 @@ class _HomescreenState extends State<Homescreen> {
                             children: [
                               Icon(
                                 Icons.location_on,
-                                color: _isAgent! ? appprimary : agentPrimaryColor,
+                                color: _isAgent! ? agentPrimaryColor : agentPrimaryColor,
                                 size: 20, // Adjust size as needed
                               ),
-                              Text('Pune'),
+                              Text('Pune',style: TextStyle(color: agentPrimaryColor),),
                               Icon(
                                 Icons.arrow_drop_down,
-                                size: 20, // Adjust size as needed
+                                size: 20,
+                                  color: agentPrimaryColor// Adjust size as needed
                               ),
                             ],
                           ),
@@ -101,7 +102,7 @@ class _HomescreenState extends State<Homescreen> {
                                 width: 1.0,
                               ),
                             ),
-                            child: Icon(Icons.notifications, size: 20),
+                            child: Icon(Icons.notifications, size: 20,color: agentPrimaryColor),
                           ),
                         ),
                         SizedBox(width: 10),

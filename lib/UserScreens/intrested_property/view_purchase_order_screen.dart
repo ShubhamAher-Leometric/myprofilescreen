@@ -22,6 +22,7 @@ class _PurchaseOrderScreenState extends State<PurchaseOrderScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Row(
                 children: [
                   CustomAppbarBackButton(),

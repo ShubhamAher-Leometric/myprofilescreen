@@ -27,8 +27,11 @@ class _SignInState extends State<Sign_in> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  height: 110,
+                  height: 130,
                   child: Image.asset('assets/undraw_city_life_gnpr 1.png')),
+              SizedBox(
+                height: 20,
+              ),
               RichText(
                 text: TextSpan(
                   style: TextStyle(
@@ -49,7 +52,7 @@ class _SignInState extends State<Sign_in> {
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Text(
                 "Welcome back",
@@ -140,7 +143,7 @@ class _SignInState extends State<Sign_in> {
                 ],
               ),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Center(
                 child: CustomElevatedButton(
@@ -156,6 +159,25 @@ class _SignInState extends State<Sign_in> {
                         builder: (context) => MenuPage(),
                       ),
                       (Route<dynamic> route) => false,
+                    );
+                  },
+                ),
+              ),
+              Center(child: Text('-----or-----')),
+              Center(
+                child: CustomElevatedButton(
+                  title: 'Login as Agent',
+                  color: appprimary,
+                  textColor: apptextcolor,
+                  size: MediaQuery.of(context).size.width / 2,
+                  onPressed: () async {
+                    await saveUserRole(false);
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MenuPage(),
+                      ),
+                          (Route<dynamic> route) => false,
                     );
                   },
                 ),

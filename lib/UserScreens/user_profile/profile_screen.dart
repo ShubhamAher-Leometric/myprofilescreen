@@ -30,6 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: SafeArea(
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(

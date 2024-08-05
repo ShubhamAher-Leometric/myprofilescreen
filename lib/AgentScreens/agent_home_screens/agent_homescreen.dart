@@ -67,10 +67,11 @@ class _AgentHomescreenState extends State<AgentHomescreen> {
                                 color:  agentappprimary ,
                                 size: 20, // Adjust size as needed
                               ),
-                              Text('Pune'),
+                              Text('Pune',style: TextStyle(color: agentappprimary),),
                               Icon(
                                 Icons.arrow_drop_down,
-                                size: 20, // Adjust size as needed
+                                size: 20,
+                                color:  agentappprimary , // Adjust size as needed
                               ),
                             ],
                           ),
@@ -95,7 +96,7 @@ class _AgentHomescreenState extends State<AgentHomescreen> {
                                 width: 1.0,
                               ),
                             ),
-                            child: Icon(Icons.notifications, size: 20),
+                            child: Icon(Icons.notifications, size: 20, color:  agentappprimary ,),
                           ),
                         ),
                         SizedBox(width: 10),

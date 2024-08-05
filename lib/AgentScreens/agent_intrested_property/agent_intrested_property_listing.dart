@@ -37,6 +37,7 @@ class _AgentIntrestedPropertyListingScreenState
         body: SafeArea(
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
@@ -108,7 +109,7 @@ class _AgentIntrestedPropertyListingScreenState
                               ),
                             ),
                           ),
-                          SizedBox(width: 3),
+                          SizedBox(width: 20),
                           Container(
                             height: 47,
                             child: ElevatedButton(
@@ -168,66 +169,69 @@ class _AgentIntrestedPropertyListingScreenState
                       children: [
                         Container(
                           width: double.infinity, // Ensures the Row has bounded width
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(50),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 40,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(1.0),
+                                    child: Image.asset('assets/user_image.png'),
+                                  ),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(1.0),
-                                  child: Image.asset('assets/user_image.png'),
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Expanded(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'Mathew Adam',
-                                            style: TextStyle(
-                                                fontSize: 16, fontWeight: FontWeight.w600),
-                                          ),
-                                          Text(
-                                            'Mathew@email.com',
-                                            style: TextStyle(
-                                                fontSize: 10, fontWeight: FontWeight.w500),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    GestureDetector(
-                                      onTap:(){
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => ContactWhatappScreen()),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.circular(50),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(1.0),
-                                          child: Image.asset('assets/details_icon/img_3.png'),
+                                SizedBox(width: 10),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Mathew Adam',
+                                              style: TextStyle(
+                                                  fontSize: 16, fontWeight: FontWeight.w600),
+                                            ),
+                                            Text(
+                                              'Mathew@email.com',
+                                              style: TextStyle(
+                                                  fontSize: 10, fontWeight: FontWeight.w500),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      GestureDetector(
+                                        onTap:(){
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => ContactWhatappScreen()),
+                                          );
+                                        },
+                                        child: Container(
+                                          height: 40,
+                                          width: 40,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(50),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(1.0),
+                                            child: Image.asset('assets/details_icon/img_3.png'),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         Divider(color: Colors.grey.withOpacity(0.2),),
@@ -296,14 +300,29 @@ class _AgentIntrestedPropertyListingScreenState
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          Text(
-                                            'Wings Tower',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                color: agentapptextcolor2,
-                                                fontWeight: FontWeight.w700),
-                                            maxLines: 2,
-                                            overflow: TextOverflow.ellipsis,
+                                          Container(
+                                            width: MediaQuery.of(context).size.width / 2.2,
+                                            child: Row(
+                                              children: [
+                                                Text(
+                                                  'Wings Tower',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      color: agentapptextcolor2,
+                                                      fontWeight: FontWeight.w700),
+                                                  maxLines: 2,
+                                                  overflow: TextOverflow.ellipsis,
+                                                ),
+                                                Spacer(),
+                                                Text(
+                                                  '\$ 370',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight: FontWeight.w600,
+                                                      color: agentapptextcolor2),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                           Container(
                                             child: Row(
@@ -329,18 +348,18 @@ class _AgentIntrestedPropertyListingScreenState
                                           ),
                                         ],
                                       ),
-                                      Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            '\$ 370',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w600,
-                                                color: agentapptextcolor2),
-                                          ),
-                                        ],
-                                      )
+                                      // Column(
+                                      //   mainAxisAlignment: MainAxisAlignment.center,
+                                      //   children: [
+                                      //     Text(
+                                      //       '\$ 370',
+                                      //       style: TextStyle(
+                                      //           fontSize: 16,
+                                      //           fontWeight: FontWeight.w600,
+                                      //           color: agentapptextcolor2),
+                                      //     ),
+                                      //   ],
+                                      // )
                                     ],
                                   ),
                                 ),
@@ -411,66 +430,69 @@ class _AgentIntrestedPropertyListingScreenState
                                   children: [
                                     Container(
                                       width: double.infinity, // Ensures the Row has bounded width
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            height: 40,
-                                            width: 40,
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.circular(50),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              height: 40,
+                                              width: 40,
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.circular(50),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(1.0),
+                                                child: Image.asset('assets/user_image.png'),
+                                              ),
                                             ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(1.0),
-                                              child: Image.asset('assets/user_image.png'),
-                                            ),
-                                          ),
-                                          SizedBox(width: 10),
-                                          Expanded(
-                                            child: Row(
-                                              children: [
-                                                Expanded(
-                                                  child: Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                    children: [
-                                                      Text(
-                                                        'Mathew Adam',
-                                                        style: TextStyle(
-                                                            fontSize: 16, fontWeight: FontWeight.w600),
-                                                      ),
-                                                      Text(
-                                                        'Mathew@email.com',
-                                                        style: TextStyle(
-                                                            fontSize: 10, fontWeight: FontWeight.w500),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  onTap:(){
-                                                    Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) => ContactWhatappScreen()),
-                                                    );
-                                                  },
-                                                  child: Container(
-                                                    height: 40,
-                                                    width: 40,
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.white,
-                                                      borderRadius: BorderRadius.circular(50),
-                                                    ),
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.all(1.0),
-                                                      child: Image.asset('assets/details_icon/img_3.png'),
+                                            SizedBox(width: 10),
+                                            Expanded(
+                                              child: Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Text(
+                                                          'Mathew Adam',
+                                                          style: TextStyle(
+                                                              fontSize: 16, fontWeight: FontWeight.w600),
+                                                        ),
+                                                        Text(
+                                                          'Mathew@email.com',
+                                                          style: TextStyle(
+                                                              fontSize: 10, fontWeight: FontWeight.w500),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ),
-                                              ],
+                                                  GestureDetector(
+                                                    onTap:(){
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) => ContactWhatappScreen()),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      height: 40,
+                                                      width: 40,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius: BorderRadius.circular(50),
+                                                      ),
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.all(1.0),
+                                                        child: Image.asset('assets/details_icon/img_3.png'),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
                                     Divider(color: Colors.grey.withOpacity(0.2),),
@@ -552,15 +574,31 @@ class _AgentIntrestedPropertyListingScreenState
                                                     mainAxisAlignment:
                                                         MainAxisAlignment.center,
                                                     children: [
-                                                      Text(
-                                                        'Wings Tower',
-                                                        style: TextStyle(
-                                                            fontSize: 16,
-                                                            color: agentapptextcolor2,
-                                                            fontWeight:
-                                                                FontWeight.w700),
-                                                        maxLines: 2,
-                                                        overflow: TextOverflow.ellipsis,
+                                                      Container(
+                                                        width: MediaQuery.of(context).size.width /
+                                                            2.2,
+                                                        child: Row(
+                                                          children: [
+                                                            Text(
+                                                              'Wings Tower',
+                                                              style: TextStyle(
+                                                                  fontSize: 16,
+                                                                  color: agentapptextcolor2,
+                                                                  fontWeight:
+                                                                      FontWeight.w700),
+                                                              maxLines: 2,
+                                                              overflow: TextOverflow.ellipsis,
+                                                            ),
+                                                            Spacer(),
+                                                            Text(
+                                                              '\$ 370',
+                                                              style: TextStyle(
+                                                                  fontSize: 16,
+                                                                  fontWeight: FontWeight.w600,
+                                                                  color: agentapptextcolor2),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                       Container(
                                                         child: Row(
@@ -587,19 +625,20 @@ class _AgentIntrestedPropertyListingScreenState
                                                       ),
                                                     ],
                                                   ),
-                                                  Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.center,
-                                                    children: [
-                                                      Text(
-                                                        '\$ 370',
-                                                        style: TextStyle(
-                                                            fontSize: 16,
-                                                            fontWeight: FontWeight.w600,
-                                                            color: agentapptextcolor2),
-                                                      ),
-                                                    ],
-                                                  )
+                                                  // Column(
+                                                  //   mainAxisAlignment:
+                                                  //       MainAxisAlignment.start,
+                                                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                                                  //   children: [
+                                                  //     Text(
+                                                  //       '\$ 370',
+                                                  //       style: TextStyle(
+                                                  //           fontSize: 16,
+                                                  //           fontWeight: FontWeight.w600,
+                                                  //           color: agentapptextcolor2),
+                                                  //     ),
+                                                  //   ],
+                                                  // )
                                                 ],
                                               ),
                                             ),

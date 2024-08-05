@@ -34,6 +34,7 @@ class _IntrestedPropertyListingScreenState
         body: SafeArea(
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
@@ -105,7 +106,7 @@ class _IntrestedPropertyListingScreenState
                               ),
                             ),
                           ),
-                          SizedBox(width: 3),
+                          SizedBox(width: 10),
                           Container(
                             height: 47,
                             child: ElevatedButton(
@@ -147,7 +148,7 @@ class _IntrestedPropertyListingScreenState
                               ),
                             ),
                           ),
-                          SizedBox(width: 3),
+                          SizedBox(width: 10),
                           Container(
                             height: 47,
                             child: ElevatedButton(
@@ -287,15 +288,31 @@ class _IntrestedPropertyListingScreenState
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Text(
-                                                    'Wings Tower',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        color: apptextcolor2,
-                                                        fontWeight:
-                                                            FontWeight.w700),
-                                                    maxLines: 2,
-                                                    overflow: TextOverflow.ellipsis,
+                                                  Container(
+                                                    width: MediaQuery.of(context).size.width /
+                                                        2.2,
+                                                    child: Row(
+                                                      children: [
+                                                        Text(
+                                                          'Wings Tower',
+                                                          style: TextStyle(
+                                                              fontSize: 16,
+                                                              color: apptextcolor2,
+                                                              fontWeight:
+                                                                  FontWeight.w700),
+                                                          maxLines: 2,
+                                                          overflow: TextOverflow.ellipsis,
+                                                        ),
+                                                        Spacer(),
+                                                        Text(
+                                                          '\$ 370',
+                                                          style: TextStyle(
+                                                              fontSize: 16,
+                                                              fontWeight: FontWeight.w600,
+                                                              color: apptextcolor2),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                   Container(
                                                     child: Row(
@@ -322,19 +339,19 @@ class _IntrestedPropertyListingScreenState
                                                   ),
                                                 ],
                                               ),
-                                              Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    '\$ 370',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight: FontWeight.w600,
-                                                        color: apptextcolor2),
-                                                  ),
-                                                ],
-                                              )
+                                              // Column(
+                                              //   mainAxisAlignment:
+                                              //       MainAxisAlignment.center,
+                                              //   children: [
+                                              //     Text(
+                                              //       '\$ 370',
+                                              //       style: TextStyle(
+                                              //           fontSize: 16,
+                                              //           fontWeight: FontWeight.w600,
+                                              //           color: apptextcolor2),
+                                              //     ),
+                                              //   ],
+                                              // )
                                             ],
                                           ),
                                         ),
@@ -456,14 +473,29 @@ class _IntrestedPropertyListingScreenState
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text(
-                                        'Wings Tower',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: apptextcolor2,
-                                            fontWeight: FontWeight.w700),
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
+                                      Container(
+                                        width: MediaQuery.of(context).size.width / 2.2,
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'Wings Tower',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: apptextcolor2,
+                                                  fontWeight: FontWeight.w700),
+                                              maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              '\$ 370',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: apptextcolor2),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                       Container(
                                         child: Row(
@@ -489,18 +521,18 @@ class _IntrestedPropertyListingScreenState
                                       ),
                                     ],
                                   ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '\$ 370',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w600,
-                                            color: apptextcolor2),
-                                      ),
-                                    ],
-                                  )
+                                  // Column(
+                                  //   mainAxisAlignment: MainAxisAlignment.center,
+                                  //   children: [
+                                  //     Text(
+                                  //       '\$ 370',
+                                  //       style: TextStyle(
+                                  //           fontSize: 16,
+                                  //           fontWeight: FontWeight.w600,
+                                  //           color: apptextcolor2),
+                                  //     ),
+                                  //   ],
+                                  // )
                                 ],
                               ),
                             ),
@@ -610,15 +642,30 @@ class _IntrestedPropertyListingScreenState
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Text(
-                                                    'Wings Tower',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        color: apptextcolor2,
-                                                        fontWeight:
-                                                            FontWeight.w700),
-                                                    maxLines: 2,
-                                                    overflow: TextOverflow.ellipsis,
+                                                  Container(
+                                                    width: MediaQuery.of(context).size.width / 2.2,
+                                                    child: Row(
+                                                      children: [
+                                                        Text(
+                                                          'Wings Tower',
+                                                          style: TextStyle(
+                                                              fontSize: 16,
+                                                              color: apptextcolor2,
+                                                              fontWeight:
+                                                                  FontWeight.w700),
+                                                          maxLines: 2,
+                                                          overflow: TextOverflow.ellipsis,
+                                                        ),
+                                                        Spacer(),
+                                                        Text(
+                                                          '\$ 370',
+                                                          style: TextStyle(
+                                                              fontSize: 16,
+                                                              fontWeight: FontWeight.w600,
+                                                              color: apptextcolor2),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                   Container(
                                                     child: Row(
@@ -645,19 +692,19 @@ class _IntrestedPropertyListingScreenState
                                                   ),
                                                 ],
                                               ),
-                                              Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    '\$ 370',
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight: FontWeight.w600,
-                                                        color: apptextcolor2),
-                                                  ),
-                                                ],
-                                              )
+                                              // Column(
+                                              //   mainAxisAlignment:
+                                              //       MainAxisAlignment.center,
+                                              //   children: [
+                                              //     Text(
+                                              //       '\$ 370',
+                                              //       style: TextStyle(
+                                              //           fontSize: 16,
+                                              //           fontWeight: FontWeight.w600,
+                                              //           color: apptextcolor2),
+                                              //     ),
+                                              //   ],
+                                              // )
                                             ],
                                           ),
                                         ),

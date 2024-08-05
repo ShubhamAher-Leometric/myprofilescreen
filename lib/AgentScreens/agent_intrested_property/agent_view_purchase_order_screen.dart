@@ -23,6 +23,7 @@ class _AgentPurchaseOrderScreenState extends State<AgentPurchaseOrderScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Row(
                 children: [
                   AgentCustomAppbarBackButton(),
