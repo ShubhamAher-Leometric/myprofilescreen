@@ -101,21 +101,42 @@ class _PurchaseOrderScreenState extends State<PurchaseOrderScreen> {
                           width: MediaQuery.of(context).size.width / 2.2,
                           height: 50,
                           child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment:
+                            CrossAxisAlignment.start,
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
                             children: [
                               Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                MainAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    'Wings Tower',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: apptextcolor2,
-                                        fontWeight: FontWeight.w700),
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
+                                  Container(
+                                    width: MediaQuery.of(context).size.width /
+                                        2.2,
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Wings Tower',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: apptextcolor2,
+                                              fontWeight:
+                                              FontWeight.w700),
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '\$ 370',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w600,
+                                              color: apptextcolor2),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Container(
                                     child: Row(
@@ -134,27 +155,29 @@ class _PurchaseOrderScreenState extends State<PurchaseOrderScreen> {
                                           style: TextStyle(
                                               fontSize: 12,
                                               color: apptextcolor2,
-                                              fontWeight: FontWeight.w400),
+                                              fontWeight:
+                                              FontWeight.w400),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ],
                               ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '\$ 370',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        color: apptextcolor2),
-                                  ),
-                                ],
-                              )
+                              // Column(
+                              //   mainAxisAlignment:
+                              //       MainAxisAlignment.center,
+                              //   children: [
+                              //     Text(
+                              //       '\$ 370',
+                              //       style: TextStyle(
+                              //           fontSize: 16,
+                              //           fontWeight: FontWeight.w600,
+                              //           color: apptextcolor2),
+                              //     ),
+                              //   ],
+                              // )
                             ],
-                          ),
+                          ), 
                         ),
                       ],
                     ),
